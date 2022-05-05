@@ -104,6 +104,7 @@ export const DefaultASTPrinter = new ASTPrinter()
     print: context,
   })
   .lookFor('fieldNames')
+  .lookFor('hexValue')
   .lookFor({
     prop: 'implicits',
     nodeType: 'CairoFunctionDefinition',

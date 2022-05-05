@@ -4,17 +4,26 @@ import {
   DataLocation,
   FunctionCall,
   FunctionCallKind,
+  Literal,
+  LiteralKind,
   NewExpression,
   TupleExpression,
   typeNameToTypeNode,
 } from 'solc-typed-ast';
-import { ReferenceSubPass } from './referenceSubPass';
 import { AST } from '../../ast/ast';
 import { printNode } from '../../utils/astPrinter';
 import { CairoType, TypeConversionContext } from '../../utils/cairoTypeSystem';
 import { NotSupportedYetError } from '../../utils/errors';
 import { createCairoFunctionStub, createCallToFunction } from '../../utils/functionGeneration';
-import { createUint256Literal, createUint256TypeName } from '../../utils/nodeTemplates';
+import {
+  createArrayTypeName,
+  createNumberTypeName,
+  createStringTypeName,
+  createUint256Literal,
+  createUint256TypeName,
+} from '../../utils/nodeTemplates';
+import { getStringLiteralBytesLength, toHexString } from '../../utils/utils';
+import { ReferenceSubPass } from './referenceSubPass';
 
 /*
   Handles expressions that directly insert data into memory: struct constructors, news, and inline arrays
@@ -47,6 +56,14 @@ export class MemoryAllocations extends ReferenceSubPass {
     }
   }
 
+  visitLiteral(node: Literal, ast: AST): void {
+    if (node.kind !== LiteralKind.String && node.kind !== LiteralKind.UnicodeString) {
+      return this.visitExpression(node, ast);
+    }
+
+    this.allocateString(node, ast);
+  }
+
   visitTupleExpression(node: TupleExpression, ast: AST): void {
     this.visitExpression(node, ast);
 
@@ -59,7 +76,10 @@ export class MemoryAllocations extends ReferenceSubPass {
     this.replace(node, replacement, undefined, actualLoc, expectedLoc, ast);
   }
 
-  allocateMemoryDynArray(node: FunctionCall, ast: AST) {
+  //---------------------------------------------------------------------------
+  // Stub generation
+
+  allocateMemoryDynArray(node: FunctionCall, ast: AST): void {
     assert(node.vExpression instanceof NewExpression);
 
     assert(
@@ -99,4 +119,53 @@ export class MemoryAllocations extends ReferenceSubPass {
     this.replace(node, call, undefined, actualLoc, expectedLoc, ast);
     ast.registerImport(call, 'warplib.memory', 'wm_new');
   }
+
+  allocateString(node: Literal, ast: AST): void {
+    assert(node.kind === LiteralKind.String || node.kind === LiteralKind.UnicodeString);
+
+    const parent = node.parent;
+
+    const length = getStringLiteralBytesLength(node);
+    const characterArray = splitLiteralToTuple(node, length, ast);
+
+    const stub = createCairoFunctionStub(
+      'wm_string',
+      [
+        [
+          'characters',
+          createArrayTypeName(createNumberTypeName(8, false, ast), length, ast),
+          DataLocation.Memory,
+        ],
+        ['len', createUint256TypeName(ast)],
+      ],
+      [['loc', createStringTypeName(ast), DataLocation.Memory]],
+      ['range_check_ptr', 'warp_memory'],
+      ast,
+      node,
+    );
+
+    const call = createCallToFunction(
+      stub,
+      [characterArray, createUint256Literal(BigInt(length), ast)],
+      ast,
+    );
+
+    const expectedLoc = this.getLocations(node)[1];
+    this.replace(node, call, parent, DataLocation.Memory, expectedLoc, ast);
+    ast.registerImport(call, 'warplib.memory', 'wm_string');
+  }
+}
+
+function splitLiteralToTuple(node: Literal, length: number, ast: AST): TupleExpression {
+  const elements: Literal[] = [];
+  for (let i = 0; i < node.hexValue.length; i += 2) {
+    const byte = `0x${node.hexValue[i]}${node.hexValue[i + 1]}`;
+    elements.push(
+      new Literal(ast.reserveId(), '', 'uint8', LiteralKind.Number, toHexString(byte), byte),
+    );
+  }
+
+  const tuple = new TupleExpression(ast.reserveId(), '', `uint8[${length}]`, true, elements);
+  ast.setContextRecursive(tuple);
+  return tuple;
 }

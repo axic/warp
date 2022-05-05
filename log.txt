@@ -1,0 +1,2496 @@
+---Solc warnings:
+Warning: Unused local variable.
+ --> ex.sol:7:5:
+  |
+7 |     string memory s = "hi";
+  |     ^^^^^^^^^^^^^^^
+
+
+---
+---Input---
+SourceUnit #11
+|   absolutePath: ex.sol
+|   context: 1
++-PragmaDirective #1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 11
+  +-FunctionDefinition #9
+    |   name: test
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---SourceUnitSplitter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---RejectUnsupportedFeatures---
+Literal #6 : literal_string "hi" (StringLiteralType )
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---LiteralExpressionEvaluator---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---UsingForResolver---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---NamedArgsRemover---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---PublicStateVarsGetterGenerator---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---IntBoundCalculator---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---ConstantHandler---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---IdentifierMangler---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: __warp_usrid0_s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---FreeLibraryCallInliner---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: __warp_usrid0_s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---ReferencedLibraries---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: __warp_usrid0_s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---InheritanceInliner---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: __warp_usrid0_s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---ExternalContractHandler---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: __warp_usrid0_s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---ModifierHandler---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-ContractDefinition #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  +-FunctionDefinition #9
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: public
+    +-ParameterList #2
+    +-ParameterList #3
+    +-Block #8
+      +-VariableDeclarationStatement #7
+        +-VariableDeclaration #5
+        | |   name: __warp_usrid0_s
+        | |   scope: 8
+        | |   storageLocation: memory
+        | |   typeString: string
+        | |   visibility: internal
+        | +-ElementaryTypeName #4
+        |       name: string
+        |       stateMutability: nonpayable
+        |       typeString: string
+        +-Literal #6
+              hexValue: 6869
+              typeString: literal_string "hi"
+              value: hi
+
+---StorageAllocator---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: public
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |     +-VariableDeclaration #5
+  |     | |   name: __warp_usrid0_s
+  |     | |   scope: 8
+  |     | |   storageLocation: memory
+  |     | |   typeString: string
+  |     | |   visibility: internal
+  |     | +-ElementaryTypeName #4
+  |     |       name: string
+  |     |       stateMutability: nonpayable
+  |     |       typeString: string
+  |     +-Literal #6
+  |           hexValue: 6869
+  |           typeString: literal_string "hi"
+  |           value: hi
+  +-FunctionDefinition #15
+    |   name: 
+    |   scope: 10
+    |   stateMutability: nonpayable
+    |   visibility: public
+    +-ParameterList #16
+    +-ParameterList #17
+    +-Block #14
+
+---PublicFunctionSplitter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |     +-VariableDeclaration #5
+  |     | |   name: __warp_usrid0_s
+  |     | |   scope: 8
+  |     | |   storageLocation: memory
+  |     | |   typeString: string
+  |     | |   visibility: internal
+  |     | +-ElementaryTypeName #4
+  |     |       name: string
+  |     |       stateMutability: nonpayable
+  |     |       typeString: string
+  |     +-Literal #6
+  |           hexValue: 6869
+  |           typeString: literal_string "hi"
+  |           value: hi
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---ExternalArgumentModifier---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |     +-VariableDeclaration #5
+  |     | |   name: __warp_usrid0_s
+  |     | |   scope: 8
+  |     | |   storageLocation: memory
+  |     | |   typeString: string
+  |     | |   visibility: internal
+  |     | +-ElementaryTypeName #4
+  |     |       name: string
+  |     |       stateMutability: nonpayable
+  |     |       typeString: string
+  |     +-Literal #6
+  |           hexValue: 6869
+  |           typeString: literal_string "hi"
+  |           value: hi
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---ExternImporter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |     +-VariableDeclaration #5
+  |     | |   name: __warp_usrid0_s
+  |     | |   scope: 8
+  |     | |   storageLocation: memory
+  |     | |   typeString: string
+  |     | |   visibility: internal
+  |     | +-ElementaryTypeName #4
+  |     |       name: string
+  |     |       stateMutability: nonpayable
+  |     |       typeString: string
+  |     +-Literal #6
+  |           hexValue: 6869
+  |           typeString: literal_string "hi"
+  |           value: hi
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---LoopFunctionaliser---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |     +-VariableDeclaration #5
+  |     | |   name: __warp_usrid0_s
+  |     | |   scope: 8
+  |     | |   storageLocation: memory
+  |     | |   typeString: string
+  |     | |   visibility: internal
+  |     | +-ElementaryTypeName #4
+  |     |       name: string
+  |     |       stateMutability: nonpayable
+  |     |       typeString: string
+  |     +-Literal #6
+  |           hexValue: 6869
+  |           typeString: literal_string "hi"
+  |           value: hi
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---ReturnInserter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-Literal #6
+  |   |       hexValue: 6869
+  |   |       typeString: literal_string "hi"
+  |   |       value: hi
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---ReturnVariableInitializer---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-Literal #6
+  |   |       hexValue: 6869
+  |   |       typeString: literal_string "hi"
+  |   |       value: hi
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---IfFunctionaliser---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-Literal #6
+  |   |       hexValue: 6869
+  |   |       typeString: literal_string "hi"
+  |   |       value: hi
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---TupleAssignmentSplitter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-Literal #6
+  |   |       hexValue: 6869
+  |   |       typeString: literal_string "hi"
+  |   |       value: hi
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---UnloadingAssignment---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-Literal #6
+  |   |       hexValue: 6869
+  |   |       typeString: literal_string "hi"
+  |   |       value: hi
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---VariableDeclarationInitialiser---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-Literal #6
+  |   |       hexValue: 6869
+  |   |       typeString: literal_string "hi"
+  |   |       value: hi
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---VariableDeclarationExpressionSplitter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-Literal #6
+  |   |       hexValue: 6869
+  |   |       typeString: literal_string "hi"
+  |   |       value: hi
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---References---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---BytesConverter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---ExternalInputChecker---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---EnumConverter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-Return #24
+        +-FunctionCall #22
+          |   typeString: tuple()
+          +-Identifier #23
+                name: test_f8a8fd6d_internal
+                referencedDeclaration: 9
+                typeString: function () pure 
+
+---DeleteHandler---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-ExpressionStatement #44
+      | +-FunctionCall #22
+      |   |   typeString: tuple()
+      |   +-Identifier #23
+      |         name: test_f8a8fd6d_internal
+      |         referencedDeclaration: 9
+      |         typeString: function () pure 
+      +-Return #24
+
+---ImplicitConversionToExplicit---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-ExpressionStatement #44
+      | +-FunctionCall #22
+      |   |   typeString: tuple()
+      |   +-Identifier #23
+      |         name: test_f8a8fd6d_internal
+      |         referencedDeclaration: 9
+      |         typeString: function () pure 
+      +-Return #24
+
+---BuiltinHandler---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-ExpressionStatement #44
+      | +-FunctionCall #22
+      |   |   typeString: tuple()
+      |   +-Identifier #23
+      |         name: test_f8a8fd6d_internal
+      |         referencedDeclaration: 9
+      |         typeString: function () pure 
+      +-Return #24
+
+---UnreachableStatementPruner---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-ExpressionStatement #44
+      | +-FunctionCall #22
+      |   |   typeString: tuple()
+      |   +-Identifier #23
+      |         name: test_f8a8fd6d_internal
+      |         referencedDeclaration: 9
+      |         typeString: function () pure 
+      +-Return #24
+
+---ExpressionSplitter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-FunctionDefinition #9
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-FunctionDefinition #15
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-FunctionDefinition #19
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-ExpressionStatement #44
+      | +-FunctionCall #22
+      |   |   typeString: tuple()
+      |   +-Identifier #23
+      |         name: test_f8a8fd6d_internal
+      |         referencedDeclaration: 9
+      |         typeString: function () pure 
+      +-Return #24
+
+---AnnotateImplicits---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-CairoFunctionDefinition #9
+  | |   implicits: warp_memory
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-CairoFunctionDefinition #15
+  | |   implicits: range_check_ptr,syscall_ptr,pedersen_ptr
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-CairoFunctionDefinition #19
+    |   implicits: warp_memory
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-ExpressionStatement #44
+      | +-FunctionCall #22
+      |   |   typeString: tuple()
+      |   +-Identifier #23
+      |         name: test_f8a8fd6d_internal
+      |         referencedDeclaration: 9
+      |         typeString: function () pure 
+      +-Return #24
+
+---CairoUtilImporter---
+SourceUnit #13
+|   absolutePath: ex__WARP_CONTRACT__WARP.sol
+|   context: 1
++-CairoFunctionDefinition #35
+| |   implicits: warp_memory
+| |   name: wm_string
+| |   scope: 13
+| |   stateMutability: nonpayable
+| |   visibility: private
+| +-ParameterList #36
+| | +-VariableDeclaration #37
+| | | |   name: characters
+| | | |   scope: 35
+| | | |   storageLocation: memory
+| | | |   typeString: uint8[2]
+| | | |   visibility: private
+| | | +-ArrayTypeName #31
+| | |   |   typeString: uint8[2]
+| | |   +-ElementaryTypeName #30
+| | |   |     name: uint8
+| | |   |     stateMutability: nonpayable
+| | |   |     typeString: uint8
+| | |   +-Literal #32
+| | |         hexValue: 32
+| | |         typeString: int_const 2
+| | |         value: 2
+| | +-VariableDeclaration #38
+| |   |   name: len
+| |   |   scope: 35
+| |   |   storageLocation: default
+| |   |   typeString: uint256
+| |   |   visibility: private
+| |   +-ElementaryTypeName #33
+| |         name: uint256
+| |         stateMutability: nonpayable
+| |         typeString: uint256
+| +-ParameterList #39
+|   +-VariableDeclaration #40
+|     |   name: loc
+|     |   scope: 35
+|     |   storageLocation: memory
+|     |   typeString: string
+|     |   visibility: private
+|     +-ElementaryTypeName #34
+|           name: string
+|           stateMutability: nonpayable
+|           typeString: string
++-CairoContract #10
+  |   linearizedBaseContracts: 10
+  |   name: WARP
+  |   scope: 13
+  |   storageAllocations: 
+  +-CairoFunctionDefinition #9
+  | |   implicits: warp_memory
+  | |   name: test_f8a8fd6d_internal
+  | |   scope: 10
+  | |   stateMutability: pure
+  | |   visibility: internal
+  | +-ParameterList #2
+  | +-ParameterList #3
+  | +-Block #8
+  |   +-VariableDeclarationStatement #7
+  |   | +-VariableDeclaration #5
+  |   | | |   name: __warp_usrid0_s
+  |   | | |   scope: 8
+  |   | | |   storageLocation: memory
+  |   | | |   typeString: string
+  |   | | |   visibility: internal
+  |   | | +-ElementaryTypeName #4
+  |   | |       name: string
+  |   | |       stateMutability: nonpayable
+  |   | |       typeString: string
+  |   | +-FunctionCall #42
+  |   |   |   typeString: string memory
+  |   |   +-Identifier #43
+  |   |   |     name: wm_string
+  |   |   |     referencedDeclaration: 35
+  |   |   |     typeString: function (uint8[2] memory, uint256) nonpayable returns (string)
+  |   |   +-TupleExpression #29
+  |   |   | |   typeString: uint8[2]
+  |   |   | +-Literal #27
+  |   |   | |     hexValue: 30783638
+  |   |   | |     typeString: uint8
+  |   |   | |     value: 0x68
+  |   |   | +-Literal #28
+  |   |   |       hexValue: 30783639
+  |   |   |       typeString: uint8
+  |   |   |       value: 0x69
+  |   |   +-Literal #41
+  |   |         hexValue: 32
+  |   |         typeString: uint256
+  |   |         value: 2
+  |   +-Return #25
+  +-CairoFunctionDefinition #15
+  | |   implicits: range_check_ptr,syscall_ptr,pedersen_ptr
+  | |   name: 
+  | |   scope: 10
+  | |   stateMutability: nonpayable
+  | |   visibility: public
+  | +-ParameterList #16
+  | +-ParameterList #17
+  | +-Block #14
+  |   +-Return #26
+  +-CairoFunctionDefinition #19
+    |   implicits: warp_memory
+    |   name: test_f8a8fd6d
+    |   scope: 10
+    |   stateMutability: pure
+    |   visibility: external
+    +-ParameterList #20
+    +-ParameterList #21
+    +-Block #18
+      +-ExpressionStatement #44
+      | +-FunctionCall #22
+      |   |   typeString: tuple()
+      |   +-Identifier #23
+      |         name: test_f8a8fd6d_internal
+      |         referencedDeclaration: 9
+      |         typeString: function () pure 
+      +-Return #24
+
+#--- ex__WARP_CONTRACT__WARP_warp.sol ---
+<cairo information> implicits: warp_memory
+function wm_string(uint8[2] memory characters, uint256 len) private returns (string memory loc);
+
+contract WARP {
+    <cairo information> implicits: warp_memory
+    function test_f8a8fd6d_internal() internal pure {
+        string memory __warp_usrid0_s = wm_string([0x68, 0x69], 2);
+        return;
+    }
+
+    <cairo information> implicits: range_check_ptr, syscall_ptr, pedersen_ptr
+    constructor() {
+        return;
+    }
+
+    <cairo information> implicits: warp_memory
+    function test_f8a8fd6d() external pure {
+        test_f8a8fd6d_internal();
+        return;
+    }
+}
+#---

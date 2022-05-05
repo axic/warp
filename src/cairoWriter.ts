@@ -620,6 +620,9 @@ class FunctionCallWriter extends CairoASTNodeWriter {
             const contract = writer.write(node.vExpression.vExpression);
             return [`${contractType}.${memberName}(${contract}${args ? ', ' : ''}${args})`];
           }
+        } else if (node.vFunctionName === 'wm_string') {
+          // TEMPORARY
+          return [`${func}(new ${args})`];
         }
         return [`${func}(${args})`];
       }

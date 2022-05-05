@@ -1,3 +1,4 @@
+import assert from 'assert';
 import {
   AddressType,
   ArrayType,
@@ -373,4 +374,13 @@ export function toSingleExpression(expressions: Expression[], ast: AST): Express
     false,
     expressions,
   );
+}
+
+export function getStringLiteralBytesLength(node: Literal): number {
+  assert(node.kind === LiteralKind.String || node.kind === LiteralKind.UnicodeString);
+  assert(
+    node.hexValue.length % 2 === 0,
+    `Expected hexValue to be even length, found ${node.hexValue}`,
+  );
+  return node.hexValue.length / 2;
 }

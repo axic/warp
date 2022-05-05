@@ -1,23 +1,51 @@
 import {
+  ArrayTypeName,
+  Block,
   DataLocation,
   ElementaryTypeName,
+  Expression,
   Identifier,
   Literal,
   LiteralKind,
   ParameterList,
-  TupleExpression,
-  VariableDeclaration,
-  Statement,
-  Block,
   Return,
-  Expression,
+  Statement,
   StructuredDocumentation,
+  TupleExpression,
+  TypeName,
+  VariableDeclaration,
 } from 'solc-typed-ast';
 import { AST } from '../ast/ast';
+import { generateLiteralTypeString } from './getTypeString';
 import { toHexString, toSingleExpression } from './utils';
 
 export function createAddressNonPayableTypeName(ast: AST): ElementaryTypeName {
   const node = new ElementaryTypeName(ast.reserveId(), '', 'address', 'address', 'nonpayable');
+  ast.setContextRecursive(node);
+  return node;
+}
+
+export function createArrayTypeName(
+  baseType: TypeName,
+  length: number | undefined,
+  ast: AST,
+): ArrayTypeName {
+  const node = new ArrayTypeName(
+    ast.reserveId(),
+    '',
+    `${baseType.typeString}[${length === undefined ? '' : length}]`,
+    baseType,
+    length === undefined
+      ? undefined
+      : new Literal(
+          ast.reserveId(),
+          '',
+          generateLiteralTypeString(`${length}`),
+          LiteralKind.Number,
+          toHexString(`${length}`),
+          `${length}`,
+        ),
+  );
   ast.setContextRecursive(node);
   return node;
 }
@@ -102,6 +130,19 @@ export function createReturn(
           ast,
         );
   const node = new Return(ast.reserveId(), '', retParamListId, retValue);
+  ast.setContextRecursive(node);
+  return node;
+}
+
+export function createNumberTypeName(width: number, signed: boolean, ast: AST): ElementaryTypeName {
+  const typeString = `${signed ? '' : 'u'}int${width}`;
+  const node = new ElementaryTypeName(ast.reserveId(), '', typeString, typeString);
+  ast.setContextRecursive(node);
+  return node;
+}
+
+export function createStringTypeName(ast: AST): ElementaryTypeName {
+  const node = new ElementaryTypeName(ast.reserveId(), '', 'string', 'string', 'nonpayable');
   ast.setContextRecursive(node);
   return node;
 }

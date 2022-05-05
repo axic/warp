@@ -113,6 +113,27 @@ func wm_new{range_check_ptr, warp_memory : DictAccess*}(len : Uint256, elemWidth
     return (loc)
 end
 
+# -----------------Strings-----------------
+
+func wm_string{range_check_ptr, warp_memory : DictAccess*}(characters : felt*, len : Uint256) -> (loc : felt):
+    alloc_locals
+    let (loc) = wm_alloc(len)
+
+    let (lenFelt) = narrow_safe(len)
+    _wm_string_alloc(loc, characters, lenFelt)
+
+    return (loc)
+end
+
+func _wm_string_alloc{warp_memory : DictAccess*}(loc : felt, characters : felt*, len : felt) -> ():
+    if len == 0:
+        return ()
+    else:
+        dict_write{dict_ptr=warp_memory}(loc, characters[0])
+        return _wm_string_alloc(loc + 1, &characters[1], len - 1)
+    end
+end
+
 # -----------------Structs-----------------
 
 func index_struct(loc : felt, index : felt) -> (indexLoc : felt):
