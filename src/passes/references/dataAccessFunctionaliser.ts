@@ -95,6 +95,20 @@ export class DataAccessFunctionaliser extends ReferenceSubPass {
           break;
         }
       }
+    } else if (actualLoc === DataLocation.CallData) {
+      switch (expectedLoc) {
+        case DataLocation.Default:
+          throw new TranspileFailedError(
+            `Unexpected CallData->Default encountered at ${printNode(node)}`,
+          );
+        case DataLocation.Memory:
+          replacement = ast.getUtilFuncGen(node).calldata.toMemory.gen(node);
+          break;
+        case DataLocation.Storage:
+          throw new NotSupportedYetError(
+            `CallData->Storage not implemented yet. Found at ${printNode(node)}`,
+          );
+      }
     }
 
     // Update the expected location of the node to be equal to its
@@ -176,16 +190,15 @@ export class DataAccessFunctionaliser extends ReferenceSubPass {
       error('VariableDeclaration.vType should be defined for compiler versions > 0.4.x'),
     );
 
-    if (actualLoc === DataLocation.Storage) {
-      if (!isCairoConstant(decl)) {
-        this.visitExpression(node, ast);
-      }
-    } else if (actualLoc === DataLocation.Memory) {
-      this.visitExpression(node, ast);
+    if (actualLoc === DataLocation.Storage && isCairoConstant(decl)) {
+      return;
     }
+
+    this.visitExpression(node, ast);
   }
 
   visitFunctionCall(node: FunctionCall, ast: AST): void {
+    console.log(`Visiting ${printNode(node)} ${node.vFunctionName}`);
     if (node.kind === FunctionCallKind.StructConstructorCall) {
       // Memory struct constructor calls should have been replaced by memoryAllocations
       return this.commonVisit(node, ast);
