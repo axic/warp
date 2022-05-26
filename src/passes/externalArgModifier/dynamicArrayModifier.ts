@@ -19,23 +19,57 @@ import { isExternallyVisible } from '../../utils/utils';
 
 export class DynArrayModifier extends ASTMapper {
   /*
-  This pass will generate the functions that are needed to load externally passed dynamic memory arrays into our WARP memory system.
+  This pass will generate the solidity nodes that are needed pass dynamic memory
+  arrays into external functions.
 
-  Externally passed dynArrays in Cairo are 2 arguments while in Solidity they are 1. This means a work around is needed for handelling them.
-  The dynArray is converted into a struct that holds its two members (len and ptr). The Identifiers that reference the original dynArray are
-  now replaced with ones that reference the struct. ie dArray[1] -> dArray_struct.ptr[1]. This struct has storageLocation CallData.
+  Externally passed dynArrays in Cairo are 2 arguments while in Solidity they are 
+  1. This means a work around is needed for handelling them. The dynArray is 
+  converted into a struct that holds its two members (len and ptr). The Identifiers 
+  that reference the original dynArray are now replaced with ones that reference 
+  the struct. ie dArray[1] -> dArray_struct.ptr[1]. This struct has storageLocation 
+  CallData.
 
-  The above happens irrespective of whether the a dynArray is declared to be in Memory or CallData. If the original dynArray is in Memory the 
-  struct created above will be passed into the wm_dynarray_alloc function which use the structs members to write the array to memory. Once 
-  again all the Identifiers that refer to the orignal dynArray are replaced with the identifiers that reference the Variable created
-  by the wm_dyarray_alloc function.
+  The above happens irrespective of whether the a dynArray is declared to be in 
+  Memory or CallData. If the original dynArray is in Memory an additional 
+  VariableDeclarationStatement is inserted at the beginning of the function body 
+  with the VariableDeclaration dataLocation in memory and the intialValue being 
+  an indentifer that references the dynArray_struct. This will trigger the write 
+  in the dataAccessFunctionalizer and will use the appropriate functions to write 
+  the calldata struct containing the dynArray to Memory. Once again all the 
+  Identifiers that refer to the orignal dynArray are replaced with the identifiers 
+  that reference the VariableDeclaration.
   
   Notes on the CallData Struct Constuction:
-  The dynArray is passed to a StructConstructor FunctionCall that has 1 argument. The FunctionDefinition it references is
-  as Stub that takes 1 argument and is never written. What is written is a StructDefintition with two members. 
+  The dynArray is passed to a StructConstructor FunctionCall that has 1 argument. 
+  The FunctionDefinition it references is as Stub that takes 1 argument and is 
+  never written. What is written is a StructDefintition with two members. 
   
-  Only once the cairoWriter is reached is the single argument in the ParameterListWriter and FunctionCallWriter split into two. 
+  Only once the cairoWriter is reached is the single argument in the 
+  ParameterListWriter and FunctionCallWriter split into two. 
   All of this is to pass the sanity check that is run post transforming the AST.
+
+  Before Pass:
+
+  function dArrayMemory(uint8[] memory x) pure public returns (uint8[] memory) {
+    return x;
+  }
+  
+  function dArrayCalldata(uint8[] calldata x) pure public returns (uint8 calldata) {
+    return x;
+    } 
+
+  After Pass:
+
+  function dArrayMemory(uint8[] calldata x) pure public returns (uint8[] memory) {
+    uint8[] calldata x_dstruct = cd_dynarray_felt(x);
+    uint8[] memory x_mem = x_dstruct;
+    return x_mem;
+  }
+
+  function dArrayCalldata(uint8[] calldata x) external pure returns (uint8[] calldata) {
+    uint8[] calldata x_dstruct = cd_dynarray_felt(x);
+    return x_dstruct;
+  }
   */
 
   visitFunctionDefinition(node: FunctionDefinition, ast: AST): void {
@@ -66,17 +100,11 @@ export class DynArrayModifier extends ASTMapper {
           ast.setContextRecursive(structArrayStatement);
           assert(structConstructorCall.vReferencedDeclaration instanceof CairoFunctionDefinition);
           if (varDecl.storageLocation === DataLocation.Memory) {
-            const allocatorFuctionCall = this.genDarrayAllocatorWriter(
-              node,
-              dArrayStruct,
-              structConstructorCall.vReferencedDeclaration,
-              ast,
-            );
             const memoryArray = cloneASTNode(varDecl, ast);
             memoryArray.name = memoryArray.name + '_mem';
             const memArrayStatement = this.createVariableDeclarationStatemet(
               memoryArray,
-              allocatorFuctionCall,
+              createIdentifier(dArrayStruct, ast),
               ast,
             );
             ids.forEach((identifier) =>
@@ -126,18 +154,5 @@ export class DynArrayModifier extends ASTMapper {
       .getUtilFuncGen(node)
       .externalFunctions.inputs.darrayStructConstructor.gen(dArrayVarDecl, node);
     return structConstructor;
-  }
-
-  private genDarrayAllocatorWriter(
-    node: FunctionDefinition,
-    darrayStruct: VariableDeclaration,
-    structDef: CairoFunctionDefinition,
-    ast: AST,
-  ): FunctionCall {
-    const alloctorFunctionCall = ast
-      .getUtilFuncGen(node)
-      .calldata.dynArrayLoader.gen(node, darrayStruct, structDef);
-
-    return alloctorFunctionCall;
   }
 }
