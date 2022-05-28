@@ -25,6 +25,11 @@ jobs:
           yarn
           pipx install black[colors]
 
+      - name: Setup warp venv
+        run: |
+          make compile
+          bin/warp install
+
       - name: Build warplib
         run: yarn warplib
 
@@ -32,6 +37,7 @@ jobs:
         run: |
           yarn lint
           black starknet-testnet/ --check --verbose --diff --color
+          source warp_venv/bin/activate
           find warplib/ -iname *.cairo -exec cairo-format -c {} +
 
   build:
@@ -55,11 +61,11 @@ jobs:
           make
           make compile
 
+      - name: Setup warp_venv
+        run: bin/warp install
+
       - name: Build warplib
         run: yarn warplib
-
-      - name: Setup warp_venv
-        run: bin/warp install --python python
 
       - name: Test code compilation
         run: make test_compilation

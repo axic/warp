@@ -55,12 +55,9 @@ export function runStarknetStatus(tx_hash: string, option: IOptionalNetwork) {
   }
 
   try {
-    execSync(
-      `${warpVenvPrefix} starknet tx_status --hash ${tx_hash} --network ${option.network}`,
-      {
-        stdio: 'inherit',
-      },
-    );
+    execSync(`${warpVenvPrefix} starknet tx_status --hash ${tx_hash} --network ${option.network}`, {
+      stdio: 'inherit',
+    });
   } catch {
     logError('starknet tx_status failed');
   }
