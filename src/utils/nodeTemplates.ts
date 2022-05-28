@@ -1,4 +1,5 @@
 import {
+  ArrayTypeName,
   ASTNode,
   Block,
   ContractDefinition,
@@ -18,6 +19,7 @@ import {
   Statement,
   StructuredDocumentation,
   TupleExpression,
+  TypeName,
   VariableDeclaration,
 } from 'solc-typed-ast';
 import { AST } from '../ast/ast';
@@ -33,6 +35,12 @@ export function createAddressTypeName(payable: boolean, ast: AST): ElementaryTyp
     'address',
     payable ? 'payable' : 'nonpayable',
   );
+  ast.setContextRecursive(node);
+  return node;
+}
+
+export function createArrayTypeName(baseType: TypeName, ast: AST): ArrayTypeName {
+  const node = new ArrayTypeName(ast.reserveId(), '', `${baseType.typeString}[]`, baseType);
   ast.setContextRecursive(node);
   return node;
 }
@@ -63,6 +71,12 @@ export function createBoolLiteral(value: boolean, ast: AST): Literal {
 
 export function createBoolTypeName(ast: AST): ElementaryTypeName {
   const node = new ElementaryTypeName(ast.reserveId(), '', 'bool', 'bool');
+  ast.setContextRecursive(node);
+  return node;
+}
+
+export function createBytesTypeName(ast: AST): ElementaryTypeName {
+  const node = new ElementaryTypeName(ast.reserveId(), '', 'bytes', 'bytes');
   ast.setContextRecursive(node);
   return node;
 }
