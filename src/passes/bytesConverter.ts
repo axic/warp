@@ -108,7 +108,7 @@ export class BytesConverter extends ASTMapper {
       selectWarplibFunction(baseTypeName, indexTypeName),
     );
     ast.replaceNode(node, call, node.parent);
-    const typeNode = replaceFixedBytesType(getNodeType(call, ast.compilerVersion));
+    const typeNode = replaceBytesType(getNodeType(call, ast.compilerVersion));
     call.typeString = generateExpressionTypeString(typeNode);
     this.commonVisit(call, ast);
   }
