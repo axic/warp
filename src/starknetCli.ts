@@ -70,7 +70,7 @@ export function runStarknetDeploy(filePath: string, options: IDeployProps) {
     );
     return;
   }
-  const { success, resultPath } = compileCairo(filePath, path.resolve(__dirname, '..', 'warplib'));
+  const { success, resultPath } = compileCairo(filePath, path.resolve(__dirname, '..'));
   if (!success) {
     logError(`Compilation of contract ${filePath} failed`);
     return;
