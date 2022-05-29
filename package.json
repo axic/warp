@@ -13,7 +13,9 @@
   "files": [
     "bin",
     "build",
-    "nethersolc"
+    "nethersolc",
+    "warp_venv.sh",
+    "warplib"
   ],
   "scripts": {
     "build": "rm -rf ./build; yarn tsc",

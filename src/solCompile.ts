@@ -84,7 +84,6 @@ function cliCompile(
   const nethersolcVersion: SupportedSolcVersions = solcVersion.startsWith('0.7.') ? `7` : `8`;
   const solcCommand = nethersolcPath(nethersolcVersion);
 
-  console.log(JSON.stringify(input));
   // Check if compiler version used is v0.7.6
   // For solc v0.8.7 and before, we need to set the allow path.
   // Since we are using latest version of v0.8.x, we do not need to set allow path
