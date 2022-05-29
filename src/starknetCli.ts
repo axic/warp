@@ -136,7 +136,7 @@ export function runStarknetCallOrInvoke(
   const wallet = options.wallet === undefined ? '--no_wallet' : `--wallet ${options.wallet}`;
   const account = options.account ? `--account ${options.account}` : '';
 
-  const { success, abiPath } = compileCairo(filePath, path.resolve(__dirname, '..', 'warplib'));
+  const { success, abiPath } = compileCairo(filePath, path.resolve(__dirname, '..'));
   if (!success) {
     logError(`Compilation of contract ${filePath} failed`);
     return;
