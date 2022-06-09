@@ -165,7 +165,11 @@ filters.forEach((filter) => {
   const controller = new AbortController();
   const { signal } = controller;
   exec('yarn testnet', { signal });
-  execSync(`FILTER=${filter} yarn test:behaviour`, { stdio: 'inherit' });
+  try {
+    execSync(`FILTER=${filter} yarn test:behaviour`, { stdio: 'inherit' });
+  } catch (e) {
+    console.log(e);
+  }
   controller.abort();
 });
 
