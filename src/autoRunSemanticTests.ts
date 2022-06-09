@@ -146,14 +146,6 @@ function uncommentTests(filter: string): void {
       .split('\n')
       .map((line): string => {
         const trimmed = line.trim();
-        if (line.includes(filter)) {
-          console.log('-');
-          console.log(line);
-          console.log(trimmed);
-          console.log(`// '${filter}/`);
-          console.log(trimmed.slice(`// '${filter}/`.length));
-          console.log('-');
-        }
         if (
           trimmed.startsWith(`// '`) &&
           trimmed.includes(filter) &&
