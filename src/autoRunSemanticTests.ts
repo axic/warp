@@ -6,106 +6,134 @@ if (!existsSync('./tests/behaviour/solidity')) {
 }
 
 const filters = [
-  // 'solidity/test/libsolidity/semanticTests/abiEncoderV1',
-  // 'solidity/test/libsolidity/semanticTests/abiEncoderV1/cleanup',
-  // 'solidity/test/libsolidity/semanticTests/abiEncoderV1/struct',
-  // 'solidity/test/libsolidity/semanticTests/abiEncoderV2',
-  // 'solidity/test/libsolidity/semanticTests/abiEncoderV2/cleanup',
-  // 'solidity/test/libsolidity/semanticTests/abiEncoderV2/struct',
-  // 'solidity/test/libsolidity/semanticTests/abiencodedecode',
-  'solidity/test/libsolidity/semanticTests/accessor',
-  // 'solidity/test/libsolidity/semanticTests/arithmetics',
-  // 'solidity/test/libsolidity/semanticTests/array',
-  // 'solidity/test/libsolidity/semanticTests/array/concat',
-  // 'solidity/test/libsolidity/semanticTests/array/copying',
-  // 'solidity/test/libsolidity/semanticTests/array/delete',
-  // 'solidity/test/libsolidity/semanticTests/array/indexAccess',
-  // 'solidity/test/libsolidity/semanticTests/array/pop',
-  // 'solidity/test/libsolidity/semanticTests/array/push',
-  // 'solidity/test/libsolidity/semanticTests/array/slices',
-  // 'solidity/test/libsolidity/semanticTests/asmForLoop',
-  // 'solidity/test/libsolidity/semanticTests/builtinFunctions',
-  // 'solidity/test/libsolidity/semanticTests/calldata',
-  // 'solidity/test/libsolidity/semanticTests/cleanup',
-  // 'solidity/test/libsolidity/semanticTests/constantEvaluator',
-  // 'solidity/test/libsolidity/semanticTests/constants',
-  // 'solidity/test/libsolidity/semanticTests/constructor',
-  // 'solidity/test/libsolidity/semanticTests/conversions',
-  // 'solidity/test/libsolidity/semanticTests/ecrecover',
-  // 'solidity/test/libsolidity/semanticTests/enums',
-  // 'solidity/test/libsolidity/semanticTests/error',
-  // 'solidity/test/libsolidity/semanticTests/errors',
-  // 'solidity/test/libsolidity/semanticTests/events',
-  // 'solidity/test/libsolidity/semanticTests/exponentiation',
-  // 'solidity/test/libsolidity/semanticTests/expressions',
-  // 'solidity/test/libsolidity/semanticTests/externalContracts',
-  // 'solidity/test/libsolidity/semanticTests/externalContracts/_prbmath',
-  // 'solidity/test/libsolidity/semanticTests/externalContracts/_stringutils',
-  // 'solidity/test/libsolidity/semanticTests/externalSource',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_external',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_external/subdir',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_non_normalized_paths',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_relative_imports',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_relative_imports/D',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_relative_imports/dir',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_relative_imports/dir/B',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_relative_imports/dir/G',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_source_name_starting_with_dots',
-  // 'solidity/test/libsolidity/semanticTests/externalSource/_source_name_starting_with_dots/dir',
-  // 'solidity/test/libsolidity/semanticTests/fallback',
-  // 'solidity/test/libsolidity/semanticTests/freeFunctions',
-  // 'solidity/test/libsolidity/semanticTests/functionCall',
-  // 'solidity/test/libsolidity/semanticTests/functionCall/inheritance',
-  // 'solidity/test/libsolidity/semanticTests/functionSelector',
-  // 'solidity/test/libsolidity/semanticTests/functionTypes',
-  // 'solidity/test/libsolidity/semanticTests/getters',
-  // 'solidity/test/libsolidity/semanticTests/immutable',
-  // 'solidity/test/libsolidity/semanticTests/inheritance',
-  // 'solidity/test/libsolidity/semanticTests/inlineAssembly',
-  // 'solidity/test/libsolidity/semanticTests/integer',
-  // 'solidity/test/libsolidity/semanticTests/interfaceID',
-  // 'solidity/test/libsolidity/semanticTests/isoltestTesting',
-  // 'solidity/test/libsolidity/semanticTests/isoltestTesting/storage',
-  // 'solidity/test/libsolidity/semanticTests/libraries',
-  // 'solidity/test/libsolidity/semanticTests/literals',
-  // 'solidity/test/libsolidity/semanticTests/memoryManagement',
-  // 'solidity/test/libsolidity/semanticTests/metaTypes',
-  // 'solidity/test/libsolidity/semanticTests/modifiers',
-  // 'solidity/test/libsolidity/semanticTests/multiSource',
-  // 'solidity/test/libsolidity/semanticTests/operators',
-  // 'solidity/test/libsolidity/semanticTests/operators/shifts',
-  // 'solidity/test/libsolidity/semanticTests/optimizer',
-  // 'solidity/test/libsolidity/semanticTests/payable',
-  // 'solidity/test/libsolidity/semanticTests/receive',
-  // 'solidity/test/libsolidity/semanticTests/revertStrings',
-  // 'solidity/test/libsolidity/semanticTests/reverts',
-  // 'solidity/test/libsolidity/semanticTests/salted_create',
-  // 'solidity/test/libsolidity/semanticTests/smoke',
-  // 'solidity/test/libsolidity/semanticTests/specialFunctions',
-  // 'solidity/test/libsolidity/semanticTests/state',
-  // 'solidity/test/libsolidity/semanticTests/statements',
-  // 'solidity/test/libsolidity/semanticTests/storage',
-  // 'solidity/test/libsolidity/semanticTests/strings',
-  // 'solidity/test/libsolidity/semanticTests/strings/concat',
-  // 'solidity/test/libsolidity/semanticTests/structs',
-  // 'solidity/test/libsolidity/semanticTests/structs/calldata',
-  // 'solidity/test/libsolidity/semanticTests/structs/conversion',
-  // 'solidity/test/libsolidity/semanticTests/tryCatch',
-  // 'solidity/test/libsolidity/semanticTests/types',
-  // 'solidity/test/libsolidity/semanticTests/types/mapping',
-  // 'solidity/test/libsolidity/semanticTests/underscore',
-  // 'solidity/test/libsolidity/semanticTests/uninitializedFunctionPointer',
-  // 'solidity/test/libsolidity/semanticTests/userDefinedValueType',
-  // 'solidity/test/libsolidity/semanticTests/variables',
-  // 'solidity/test/libsolidity/semanticTests/various',
-  // 'solidity/test/libsolidity/semanticTests/viaYul',
-  // 'solidity/test/libsolidity/semanticTests/viaYul/array_memory_allocation',
-  // 'solidity/test/libsolidity/semanticTests/viaYul/cleanup',
-  // 'solidity/test/libsolidity/semanticTests/viaYul/conditional',
-  // 'solidity/test/libsolidity/semanticTests/viaYul/conversion',
-  // 'solidity/test/libsolidity/semanticTests/viaYul/loops',
-  // 'solidity/test/libsolidity/semanticTests/viaYul/storage',
-  // 'solidity/test/libsolidity/semanticTests/virtualFunctions',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/abiEncoderV1',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/abiEncoderV1/cleanup',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/abiEncoderV1/struct',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/abiEncoderV2',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/abiEncoderV2/cleanup',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/abiEncoderV2/struct',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/abiencodedecode',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/accessor',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/arithmetics',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/array',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/array/concat',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/array/delete',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/array/indexAccess',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/array/pop',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/array/push',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/slices',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/asmForLoop',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/builtinFunctions',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/cleanup',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/constantEvaluator',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/constants',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/conversions',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/ecrecover',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/enums',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/error',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/errors',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/events',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/exponentiation',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/expressions',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalContracts',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalContracts/_prbmath',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalContracts/_stringutils',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_external',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_external/subdir',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_non_normalized_paths',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_relative_imports',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_relative_imports/D',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_relative_imports/dir',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_relative_imports/dir/B',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_relative_imports/dir/G',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_source_name_starting_with_dots',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/externalSource/_source_name_starting_with_dots/dir',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/fallback',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/freeFunctions',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/functionCall',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/functionCall/inheritance',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/functionSelector',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/functionTypes',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/getters',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/immutable',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/inheritance',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/inlineAssembly',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/integer',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/interfaceID',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/isoltestTesting',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/isoltestTesting/storage',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/literals',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/memoryManagement',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/metaTypes',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/modifiers',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/multiSource',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/operators',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/operators/shifts',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/optimizer',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/payable',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/receive',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/revertStrings',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/reverts',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/salted_create',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/specialFunctions',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/state',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/statements',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/storage',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/strings',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/concat',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/structs',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/structs/calldata',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/structs/conversion',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/tryCatch',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/types',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/types/mapping',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/underscore',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/uninitializedFunctionPointer',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/variables',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/various',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_memory_allocation',
+
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/cleanup',
+  // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/conditional',
+
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/conversion',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/loops',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/storage',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests/virtualFunctions',
+  'tests/behaviour/solidity/test/libsolidity/semanticTests',
 ];
 
 const whitelistPath = './tests/behaviour/expectations/semantic_whitelist.ts';
@@ -118,10 +146,18 @@ function uncommentTests(filter: string): void {
       .split('\n')
       .map((line): string => {
         const trimmed = line.trim();
+        if (line.includes(filter)) {
+          console.log('-');
+          console.log(line);
+          console.log(trimmed);
+          console.log(`// '${filter}/`);
+          console.log(trimmed.slice(`// '${filter}/`.length));
+          console.log('-');
+        }
         if (
           trimmed.startsWith(`// '`) &&
-          !trimmed.slice(2).includes('//') &&
-          line.includes(filter)
+          trimmed.includes(filter) &&
+          !trimmed.slice(`// '${filter}/`.length).includes('/')
         ) {
           return line.replace('//', '');
         } else {
