@@ -127,6 +127,14 @@ function genContractInterface(
       contractInterface.appendChild(funcClone);
       ast.registerChild(funcClone, contractInterface);
     });
+
+  contract.vStructs.forEach((struct) => {
+    const structClone = cloneASTNode(struct, ast);
+    structClone.scope = contractId;
+    contractInterface.appendChild(structClone);
+    ast.registerChild(structClone, contractInterface);
+  });
+
   sourceUnit.appendChild(contractInterface);
   ast.registerChild(contractInterface, sourceUnit);
   return contractInterface;
