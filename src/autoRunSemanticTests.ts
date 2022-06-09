@@ -166,7 +166,10 @@ filters.forEach((filter) => {
   const { signal } = controller;
   exec('yarn testnet', { signal });
   try {
-    execSync(`FILTER=${filter} yarn test:behaviour`, { stdio: 'inherit' });
+    execSync(
+      `FILTER=${filter} npx mocha tests/behaviour/behaviour.test.ts --extension ts --require ts-node/register --exit`,
+      { stdio: 'inherit' },
+    );
   } catch (e) {
     console.log(e);
   }
