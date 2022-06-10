@@ -1,4 +1,4 @@
-import { exec, execSync } from 'child_process';
+import { execSync, spawn } from 'child_process';
 import { existsSync, readFileSync, writeFileSync } from 'fs-extra';
 
 if (!existsSync('./tests/behaviour/solidity')) {
@@ -160,11 +160,10 @@ function uncommentTests(filter: string): void {
   );
 }
 
+spawn('yarn', ['testnet']);
 filters.forEach((filter) => {
   uncommentTests(filter);
-  const controller = new AbortController();
-  const { signal } = controller;
-  exec('yarn testnet', { signal });
+  console.log('------------------------------------------------------');
   try {
     execSync(
       `FILTER=${filter} npx mocha tests/behaviour/behaviour.test.ts --extension ts --require ts-node/register --exit`,
@@ -173,7 +172,6 @@ filters.forEach((filter) => {
   } catch (e) {
     console.log(e);
   }
-  controller.abort();
 });
 
 writeFileSync(whitelistPath, whitelistData);
