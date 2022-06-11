@@ -1,4 +1,4 @@
-import { execSync, spawn } from 'child_process';
+import { execSync } from 'child_process';
 import { existsSync, readFileSync, writeFileSync } from 'fs-extra';
 
 if (!existsSync('./tests/behaviour/solidity')) {
@@ -160,7 +160,6 @@ function uncommentTests(filter: string): void {
   );
 }
 
-spawn('yarn', ['testnet']);
 filters.forEach((filter) => {
   uncommentTests(filter);
   console.log('------------------------------------------------------');
