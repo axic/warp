@@ -901,12 +901,12 @@ const tests: string[] = [
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/using_for_overload.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/using_for_storage_structs.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/using_library_mappings_return.sol',
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/using_library_structs.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/using_library_mappings_public.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/internal_library_function_bound_to_contract.sol', // STRETCH new
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/mapping_returns_in_library.sol', // STRETCH conditional
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/internal_library_function_bound_to_address_named_send_transfer.sol', // WILL NOT SUPPORT raw address calls
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/internal_library_function_bound_to_interface.sol', // STRETCH new
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/using_library_structs.sol', // nested dynarray inputs
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/external_call_with_function_pointer_parameter.sol', // WILL NOT SUPPORT function objects
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/internal_library_function_bound_to_external_function.sol', // WILL NOT SUPPORT function objects
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/libraries/internal_library_function_bound_to_function_named_selector.sol', // WILL NOT SUPPORT function objects
@@ -1105,8 +1105,8 @@ const tests: string[] = [
   ...[
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke/bytes_and_strings.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke/multiline_comments.sol',
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke/multiline.sol',
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke/structs.sol',
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke/multiline.sol', // attempts to call non-existant function
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke/structs.sol', // nested dynarray
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke/arrays.sol', // dynarray of static array
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke/failure.sol', // non-literal require message
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/smoke/alignment.sol', // REQUIRES CAIRO 0.9
@@ -1492,7 +1492,7 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/storage/dirty_storage_static_array.sol', // WILL NOT SUPPORT yul
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/storage/dirty_storage_struct.sol', // WILL NOT SUPPORT yul
     ],
-    //---------ViaYul misc: 195 passing, 20 pending, 26 failing
+    //---------ViaYul misc: 212 passing
     ...[
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_2d_assignment.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_2d_new.sol',
@@ -1503,19 +1503,13 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_memory_index_access.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_push_return_reference.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_push_with_arg.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_index_access.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_index_boundary_test.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_length_access.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_pop_zero_length.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_push_empty.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_push_empty_length_address.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_push_pop.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/assert.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/assert_and_require.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/assign_tuple_from_function_call.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/calldata_bytes_array_bounds.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/comparison.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/comparison_functions.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/define_tuple_from_function_call.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/detect_add_overflow.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/detect_add_overflow_signed.sol',
@@ -1533,8 +1527,8 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/exp_neg_overflow.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/exp_overflow.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/exp_various.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/function_entry_checks.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/if.sol',
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/keccak.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/local_address_assignment.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/local_assignment.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/local_bool_assignment.sol',
@@ -1548,12 +1542,19 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/return_storage_pointers.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/short_circuit.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/simple_assignment.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/smoke_test.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/string_format.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/string_literals.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/tuple_evaluation_order.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/unary_fixedbytes.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/virtual_functions.sol',
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_length_access.sol', // exceeds testnet step count, functionality moved to behaviour tests
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_push_empty_length_address.sol', // exceeds testnet step count, functionality moved to behaviour tests
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_push_pop.sol', // exceeds testnet step count, functionality moved to behaviour tests
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/array_storage_index_access.sol', // exceeds testnet step count, functionality moved to behaviour tests
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/function_entry_checks.sol', // tests invalid solidity calldata
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/comparison_functions.sol', // WILL NOT SUPPORT function objects
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/calldata_bytes_array_bounds.sol', //invalid calldata
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/smoke_test.sol', // attempts to call non-existant function
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/empty_return_corrupted_free_memory_pointer.sol', // WILL NOT SUPPORT yul
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/calldata_array_length.sol', // nested dynarray args
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/calldata_array_three_dimensional.sol', // nested dynarray args
@@ -1562,7 +1563,6 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/calldata_array_access.sol', // nested dynarray args
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/struct_member_access.sol', // nested dyn array arg
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/calldata_array_index_range_access.sol', // STRETCH slices
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/keccak.sol', // WILL NOT SUPPORT keccak
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/function_selector.sol', // WILL NOT SUPPORT function selector
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/function_pointers.sol', // WILL NOT SUPPORT function objects
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/viaYul/function_address.sol', // WILL NOT SUPPORT function address
