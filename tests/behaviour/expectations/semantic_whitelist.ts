@@ -136,14 +136,13 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/concat/bytes_concat_2_args.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/concat/bytes_concat_3_args.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/concat/bytes_concat_as_argument.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/concat/bytes_concat_different_types.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/concat/bytes_concat_empty_argument_list.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/concat/bytes_concat_empty_strings.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/concat/bytes_concat_nested.sol',
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/concat/bytes_concat_different_types.sol', // WILL NOT SUPPORT
     ],
     //---------Array copying tests 114 passing, 62 pending, 29 failing
     ...[
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_different_packing.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_including_array.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_memory_to_storage.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_storage_abi_signed.sol',
@@ -160,35 +159,23 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_target_leftover2.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_target_simple.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_target_simple_2.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_nested_calldata_to_storage.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_nested_memory_to_storage.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_struct_calldata_to_memory.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_struct_calldata_to_storage.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_struct_memory_to_storage.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_structs_containing_arrays_calldata_to_storage.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_structs_containing_arrays_memory_to_storage.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_storage_multi_items_per_slot.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/arrays_from_and_to_storage.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/bytes_calldata_to_string_calldata.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/bytes_inside_mappings.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/bytes_memory_to_storage.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/bytes_storage_to_memory.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/bytes_storage_to_storage.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_2d_bytes_to_memory.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_2d_bytes_to_memory_2.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_array_dynamic_to_storage.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_array_of_struct_to_memory.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_array_static_to_memory.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_bytes_array_to_memory.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_bytes_to_storage.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_dyn_2d_bytes_to_memory.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_to_storage_different_base.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/copy_byte_array_in_struct_to_storage.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/copy_removes_bytes_data.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/memory_dyn_2d_bytes_to_storage.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/memory_to_storage_different_base.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/storage_memory_nested.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/storage_memory_nested_bytes.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/storage_memory_nested_from_pointer.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/storage_memory_nested_struct.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/storage_memory_packed.sol',
@@ -196,6 +183,17 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/string_calldata_to_bytes_calldata.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/copying_bytes_multiassign.sol', // STRETCH new
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_calldata_storage.sol', // dynarray of static arrays
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_struct_calldata_to_storage.sol', // Copying of type struct C.S calldata[] calldata to storage not yet supported
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_structs_containing_arrays_memory_to_storage.sol', // NOT Supported yet
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_struct_memory_to_storage.sol', // Copying of type struct C.S calldata[] calldata to storage not yet supported
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/bytes_inside_mappings.sol', // Transpilation abandoned msg object not supported outside of 'msg.sender'
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_2d_bytes_to_memory.sol', // Not supported
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_2d_bytes_to_memory_2.sol', // Not supported
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_bytes_array_to_memory.sol', // Not supported
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_dyn_2d_bytes_to_memory.sol', // Not supported
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/copy_removes_bytes_data.sol', // Not supported
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/storage_memory_nested_bytes.sol', // Not supported
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_structs_containing_arrays_calldata_to_storage.sol', // Copying of type struct C.S calldata[] calldata to storage not yet supported
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_structs_containing_arrays_calldata_to_memory.sol',// nested dynarray arg
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_function_external_storage_to_storage_dynamic_different_mutability.sol', // WILL NOT SUPPORT function objects
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_nested_calldata_to_memory.sol', // nested dynarray arg
@@ -203,6 +201,8 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_nested_array_copy_to_memory.sol', // input args with nested dynarrays
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/calldata_dynamic_array_to_memory.sol', // input args with nested dynarrays
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_nested_array.sol', // dynarray of static array arg
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_different_packing.sol', // Not supportet yet
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_nested_calldata_to_storage.sol', // Not supported yet.
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_storage_to_memory_nested.sol', // WILL NOT SUPPORT returns nested dyn arrays
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_of_function_external_storage_to_storage_dynamic.sol', // WILL NOT SUPPORT function objects
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/copying/array_copy_cleanup_uint128.sol', // WILL NOT SUPPORT yul
@@ -287,8 +287,6 @@ const tests: string[] = [
     ...[
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/arrays_complex_from_and_to_storage.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/byte_array_transitional_2.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/bytes_to_fixed_bytes_simple.sol',
-      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/bytes_to_fixed_bytes_too_long.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/calldata_array.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/calldata_array_of_struct.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/constant_var_as_array_length.sol',
@@ -336,6 +334,8 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/byte_array_storage_layout.sol', // WILL NOT SUPPORT yul
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/bytes_to_fixed_bytes_cleanup.sol', // WILL NOT SUPPORT yul
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/invalid_encoding_for_storage_byte_array.sol', // WILL NOT SUPPORT yul
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/bytes_to_fixed_bytes_simple.sol', // WILL NOT SUPPORT
+      // 'tests/behaviour/solidity/test/libsolidity/semanticTests/array/bytes_to_fixed_bytes_too_long.sol', // WILL NOT SUPPORT
     ],
   ],
   //---------Asm for loop - WillNotSupport
@@ -372,10 +372,10 @@ const tests: string[] = [
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_internal_library.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_internal_multi_fixed_array.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_memory_mixed.sol',
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_string_array.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_struct.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_struct_internal.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_bound_dynamic_array_or_slice.sol', // STRETCH slices
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_string_array.sol', // Not supported
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_array_dynamic_bytes.sol', // nested dynarray arg
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_bytes_to_memory_encode.sol', // WILL NOT SUPPORT abi.encode
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/calldata/calldata_internal_function_pointer.sol', // WILL NOT SUPPORT function objects
@@ -431,14 +431,14 @@ const tests: string[] = [
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/order_of_evaluation.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/base_constructor_arguments.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/constructor_arguments_external.sol',
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/functions_called_by_constructor_through_dispatch.sol',
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/constructor_function_complex.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/no_callvalue_check.sol', // STRETCH new
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/evm_exceptions_in_constructor_call_fail.sol', // address.call
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/constructor_arguments_internal.sol', // STRETCH new
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/bytes_in_constructors_packer.sol', // STRETCH new
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/arrays_in_constructors.sol', // STRETCH new
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/callvalue_check.sol', // WILL NOT SUPPORT yul
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/constructor_function_complex.sol', // Function objects Not supported
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/functions_called_by_constructor_through_dispatch.sol', // Function objects Not supported
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/constructor_function_argument.sol', // WILL NOT SUPPORT function objects
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/store_function_in_constructor_packed.sol', // WILL NOT SUPPORT function objects
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/store_function_in_constructor.sol', // WILL NOT SUPPORT function objects
@@ -1116,9 +1116,9 @@ const tests: string[] = [
   ],
   //---------specialFunctions - 4 passing
   ...[
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/specialFunctions/abi_encode_with_signature_from_string.sol',
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/specialFunctions/abi_functions_member_access.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/specialFunctions/keccak256_optimized.sol',
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/specialFunctions/abi_encode_with_signature_from_string.sol', // WILL NOT SUPPORT
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/specialFunctions/abi_functions_member_access.sol', // Function objects not supported
   ],
   //---------state - no relevant tests
   ...[
@@ -1172,12 +1172,12 @@ const tests: string[] = [
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/empty_string.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/concat/string_concat_empty_strings.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/concat/string_concat_empty_argument_list.sol',
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/concat/string_concat_different_types.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/concat/string_concat_nested.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/concat/string_concat_2_args.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/unicode_string.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/constant_string_literal.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/unicode_escapes.sol',
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/strings/concat/string_concat_different_types.sol', // STRETCH indexaccess range
   ],
   //---------structs: 124 passing, 36 pending, 20 failing
   ...[
@@ -1335,7 +1335,6 @@ const tests: string[] = [
   ],
   //---------UserDefinedValueType - 45 passing, 4 pending, 3 failing
   ...[
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/in_parenthesis.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/conversion.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/simple.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/zero_cost_abstraction_comparison_userdefined.sol',
@@ -1350,6 +1349,7 @@ const tests: string[] = [
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/fixedpoint.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/abicodec.sol', // WILL NOT SUPPORT abi.encode
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/calldata.sol', // WILL NOT SUPPORT address members
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/in_parenthesis.sol', // Function objects not supported
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/erc20.sol', // WILL NOT SUPPORT indexed parameters
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/multisource.sol', // WILL NOT SUPPORT module
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/userDefinedValueType/multisource_module.sol', // WILL NOT SUPPORT module
