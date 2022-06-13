@@ -431,8 +431,8 @@ const tests: string[] = [
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/order_of_evaluation.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/base_constructor_arguments.sol',
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/constructor_arguments_external.sol',
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/functions_called_by_constructor_through_dispatch.sol',
-    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/constructor_function_complex.sol',
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/functions_called_by_constructor_through_dispatch.sol', // uses function objects
+    // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/constructor_function_complex.sol', // uses new
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/no_callvalue_check.sol', // STRETCH new
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/evm_exceptions_in_constructor_call_fail.sol', // address.call
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/constructor/constructor_arguments_internal.sol', // STRETCH new
@@ -623,7 +623,7 @@ const tests: string[] = [
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/freeFunctions/import.sol', // multisource single file
     // 'tests/behaviour/solidity/test/libsolidity/semanticTests/freeFunctions/free_runtimecode.sol', // WILL NOT SUPPORT type(Contract).runtimeCode
   ],
-  //---------Function call tests: 88 passing, 9 pending, 3 failing
+  //---------Function call tests: 89 passing, 8 pending, 3 failing
   ...[
     //---------Function call inheritance tests 36 passing
     ...[
@@ -637,7 +637,7 @@ const tests: string[] = [
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/functionCall/inheritance/call_base_explicit.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/functionCall/inheritance/call_base_base.sol',
     ],
-    //---------Function call misc tests: 52 passing, 9 pending, 3 failing
+    //---------Function call misc tests: 53 passing, 8 pending, 3 failing
     ...[
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/functionCall/array_multiple_local_vars.sol',
       // 'tests/behaviour/solidity/test/libsolidity/semanticTests/functionCall/bound_function_in_var.sol',
